@@ -1,0 +1,16 @@
+#EXERCICIO 79
+
+lista = list()
+while True:
+   num = (int(input('Digite um valor:')))
+   if num not in lista:
+      lista.append(num)
+   else:
+      print(f'Valor ja adcionador')
+   r = str(input('Quer continuar? S/N'))
+   if 'N' in r:
+      break
+
+
+
+print(sorted(lista))

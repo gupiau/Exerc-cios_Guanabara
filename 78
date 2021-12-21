@@ -1,0 +1,25 @@
+#EXERCÌCIO 78 LEIA 5 VALORES E GUARDE EM UMA LISTA
+# NO FINAL MOSTRE O MAIOR E MENOOR VALOR DIGITADO E SUAS POSICOES NA LISTA
+lista = list()
+maior = 0
+menor = 0
+for i in range(5):
+    lista.append(int(input(f'Digite um valor na posição {i} :')))
+    if i == 0:
+        maior = menor = lista[i]
+    else:
+        if lista[i] > maior:
+            maior = lista[i]
+        if lista[i] < menor:
+            menor = lista[i]
+print('--' *30)
+print(f'O maior valor foi da lista foi {maior}')
+print(f'O menor valor foi da lista foi {menor}')
+print('--'*30)
+for i, v in enumerate(lista):
+    if v == maior:
+        print(f'O maior valor ({maior}) está na posição {i}')
+
+for i, v in enumerate(lista):
+    if v == menor:
+        print(f'O menor valor ({menor}) está na posição {i}')
